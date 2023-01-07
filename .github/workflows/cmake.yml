@@ -1,0 +1,41 @@
+name: CMake
+
+on: [push]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    # The CMake configure and build commands are platform agnostic and should work equally
+    # well on Windows or Mac.  You can convert this to a matrix build if you need
+    # cross-platform coverage.
+    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependeces
+      working-directory: ${{github.workspace}}
+      shell: bash
+      run: |
+          sudo apt-get install curl build-essential libtool autotools-dev automake pkg-config python3 bsdmainutils cmake
+          sudo apt update 
+          sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev
+          cd ..
+          mkdir boost
+          cd boost
+          wget https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.gz
+          tar xvf boost_1_80_0.tar.gz
+          cd boost_1_80_0
+          ./bootstrap.sh --prefix=/usr/
+          sudo ./b2 install
+          cd ..
+          git clone https://github.com/LOUD-Mining/whatcoin
+    - name: build
+      working-directory: ${{github.workspace}}
+      shell: bash
+      run: |
+          make release
+          

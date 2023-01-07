@@ -36,7 +36,7 @@
 #include <boost/uuid/uuid.hpp>
 
 
-#define HARDFORK_1_HEIGHT                               1
+#define HARDFORK_1_HEIGHT                               0
 #define CRYPTONOTE_DNS_TIMEOUT_MS                       20000
 
 #define CRYPTONOTE_MAX_BLOCK_NUMBER                     500000000
@@ -44,7 +44,7 @@
 #define CRYPTONOTE_GETBLOCKTEMPLATE_MAX_BLOCK_SIZE    	196608 //size of block (bytes) that is the maximum that miners will produce
 #define CRYPTONOTE_MAX_TX_SIZE                          1000000000
 #define CRYPTONOTE_PUBLIC_ADDRESS_TEXTBLOB_VER          0
-#define CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW            60
+#define CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW            20
 #define CURRENT_TRANSACTION_VERSION                     3
 #define CURRENT_BLOCK_MAJOR_VERSION                     1
 #define CURRENT_BLOCK_MINOR_VERSION                     0
@@ -80,7 +80,7 @@ static_assert(STAKING_PORTIONS % 3 == 0, "Use a multiple of three, so that it di
 //////
 
 // MONEY_SUPPLY - total number coins to be generated
-#define MONEY_SUPPLY                                    ((uint64_t)(1050000000000))
+#define MONEY_SUPPLY                                    ((uint64_t)(200000000000))
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (22)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)30)
 
@@ -159,7 +159,7 @@ static_assert(STAKING_PORTIONS % 3 == 0, "Use a multiple of three, so that it di
 
 #define ALLOW_DEBUG_COMMANDS
 
-#define CRYPTONOTE_NAME                         "uplexa"
+#define CRYPTONOTE_NAME                         "whatcoin"
 #define CRYPTONOTE_POOLDATA_FILENAME            "poolstate.bin"
 #define CRYPTONOTE_BLOCKCHAINDATA_FILENAME      "data.mdb"
 #define CRYPTONOTE_BLOCKCHAINDATA_LOCK_FILENAME "lock.mdb"
@@ -196,9 +196,9 @@ namespace config
   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x1661a3; //UPi
   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 294;
 
-  uint16_t const P2P_DEFAULT_PORT = 21060;
-  uint16_t const RPC_DEFAULT_PORT = 21061;
-  uint16_t const ZMQ_RPC_DEFAULT_PORT = 21062;
+  uint16_t const P2P_DEFAULT_PORT = 21420;
+  uint16_t const RPC_DEFAULT_PORT = 21421;
+  uint16_t const ZMQ_RPC_DEFAULT_PORT = 21422;
 
   boost::uuids::uuid const NETWORK_ID = { {
       0xF1 ,0xF1, 0x00, 0x61 , 0x71, 0x01 , 0x41, 0x61, 0x00, 0x30, 0x82, 0xA1, 0x12, 0x16, 0xA1, 0xA1
@@ -219,9 +219,9 @@ namespace config
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x1d0b24;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 294;
 
-    uint16_t const P2P_DEFAULT_PORT = 22060;
-    uint16_t const RPC_DEFAULT_PORT = 22061;
-    uint16_t const ZMQ_RPC_DEFAULT_PORT = 22062;
+    uint16_t const P2P_DEFAULT_PORT = 22420;
+    uint16_t const RPC_DEFAULT_PORT = 22421;
+    uint16_t const ZMQ_RPC_DEFAULT_PORT = 22422;
 
     boost::uuids::uuid const NETWORK_ID = { {
         0x12 ,0xF1, 0x00, 0x61 , 0x71, 0x01 , 0x41, 0x61, 0x00, 0x31, 0x82, 0xA1, 0x12, 0x16, 0xA1, 0xA1
@@ -243,9 +243,9 @@ namespace config
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0xe5326;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 294;
 
-    uint16_t const P2P_DEFAULT_PORT = 23060;
-    uint16_t const RPC_DEFAULT_PORT = 23061;
-    uint16_t const ZMQ_RPC_DEFAULT_PORT = 23062;
+    uint16_t const P2P_DEFAULT_PORT = 21420;
+    uint16_t const RPC_DEFAULT_PORT = 21421;
+    uint16_t const ZMQ_RPC_DEFAULT_PORT = 21422;
 
     boost::uuids::uuid const NETWORK_ID = { {
         0x12 ,0xF1, 0x00, 0x61 , 0x71, 0x01 , 0x41, 0x61, 0x00, 0x31, 0x82, 0x30, 0x12, 0x16, 0xA1, 0xA1

@@ -1,4 +1,4 @@
-// Copyright (c) 2018-2020, The uPlexa Team
+// Copyright (c) 2018-2020, The WhatCoin Team
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -105,7 +105,7 @@ static_assert(STAKING_PORTIONS % 3 == 0, "Use a multiple of three, so that it di
 #define ORPHANED_BLOCKS_MAX_COUNT                       100
 
 #define DIFFICULTY_TARGET 			                        60 //seconds
-#define DIFFICULTY_TARGET_V2                            120  // seconds
+#define DIFFICULTY_TARGET_V2                            60 // seconds
 #define DIFFICULTY_TARGET_V1                            60  // seconds - before first fork
 #define DIFFICULTY_WINDOW                               720 // blocks
 #define DIFFICULTY_LAG                                  15  // !!!

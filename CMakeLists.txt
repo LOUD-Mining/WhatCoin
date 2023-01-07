@@ -43,7 +43,7 @@ endif()
 cmake_minimum_required(VERSION 3.22)
 message(STATUS "CMake version ${CMAKE_VERSION}")
 
-project(uplexa)
+project(WhatCoin)
 
 function (die msg)
   if (NOT WIN32)

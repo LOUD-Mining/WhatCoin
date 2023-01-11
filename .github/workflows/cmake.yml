@@ -33,6 +33,7 @@ jobs:
           sudo ./b2 install
           cd ..
           git clone https://github.com/LOUD-Mining/whatcoin.git
+          cd whatcoin
           git submodule update --init --force external/miniupnp
     - name: build
       working-directory: ${{github.workspace}}

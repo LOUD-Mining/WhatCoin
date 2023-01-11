@@ -148,11 +148,11 @@ invokes cmake commands as needed.
 * Install OpenSSL (1.1.1 or newer): Install OpenSSL to armor/openssl folder. (In below commands use switch linux-x86_64-clang instead of linux-x86_64 if using clang.)
 
 
-$  git clone --single-branch --branch OpenSSL_1_1_1b --depth 1 https://github.com/openssl/openssl.git
-$ cd openssl
-$ ./Configure linux-x86_64 no-shared
-$ make -j8
-$ cd ..
+  git clone --single-branch --branch OpenSSL_1_1_1b --depth 1 https://github.com/openssl/openssl.git
+  cd openssl
+  ./Configure linux-x86_64 no-shared
+  make -j8
+  cd ..
 
 
 * Change to the root of the source code directory, change to the most recent release branch, and build:

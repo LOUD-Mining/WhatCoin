@@ -138,11 +138,11 @@ invokes cmake commands as needed.
 #### On Linux and OS X
 
 * Install the dependencies
-* Install Boost-1.64.0
+* Install Boost-1.74.0
 
- `$ wget https://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2`  
- `$ tar xvfo boost_1_64_0.tar.bz2`  
- `$ cd boost_1_64_0`  
+ `$ wget https://sourceforge.net/projects/boost/files/boost/1.74.0/boost_1_74_0.tar.bz2`  
+ `$ tar xvfo boost_1_74_0.tar.bz2`  
+ `$ cd boost_1_74_0`  
  `$ ./bootstrap.sh`  
  `$ ./b2`
 * Install OpenSSL (1.1.1 or newer): Install OpenSSL to armor/openssl folder. (In below commands use switch linux-x86_64-clang instead of linux-x86_64 if using clang.)

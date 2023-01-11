@@ -40,7 +40,7 @@ if (IOS)
     INCLUDE(CmakeLists_IOS.txt)
 endif()
 
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 2.8.7...3.22)
 message(STATUS "CMake version ${CMAKE_VERSION}")
 
 project(WhatCoin)

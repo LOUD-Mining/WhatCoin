@@ -35,6 +35,8 @@ jobs:
           git clone https://github.com/LOUD-Mining/whatcoin.git
           cd whatcoin
           git submodule update --init --force external/miniupnp
+          git submodule update --init --force external/unbound
+          git submodule update --init --force external/rapidjson
     - name: build
       working-directory: ${{github.workspace}}
       shell: bash

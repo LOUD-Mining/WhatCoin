@@ -12,7 +12,7 @@ jobs:
     # well on Windows or Mac.  You can convert this to a matrix build if you need
     # cross-platform coverage.
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
     - uses: actions/checkout@v3
@@ -28,11 +28,7 @@ jobs:
       working-directory: ${{github.workspace}}
       shell: bash
       run: |
-          sudo apt-get install curl build-essential libtool autotools-dev automake pkg-config python3 bsdmainutils cmake
-          sudo apt update 
-          sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev
           git submodule update --init --force external/miniupnp
           git submodule update --init --force external/unbound
           git submodule update --init --force external/rapidjson
           make release
-          

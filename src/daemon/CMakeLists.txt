@@ -95,5 +95,5 @@ target_link_libraries(daemon
     ${Blocks})
 set_property(TARGET daemon
   PROPERTY
-    OUTPUT_NAME "uplexad")
+    OUTPUT_NAME "whatcoind")
 install(TARGETS daemon DESTINATION bin)

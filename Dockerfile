@@ -33,8 +33,7 @@ RUN set -ex && \
         liblzma-dev \
         libreadline6-dev \
         libldns-dev \
-        libexpat1-dev \
-        libpgm-dev 
+        libexpat1-dev 
         
 
 WORKDIR /usr/local

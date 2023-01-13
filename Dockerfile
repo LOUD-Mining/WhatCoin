@@ -4,8 +4,8 @@
 FROM ubuntu:20.04 as builder
 
 RUN set -ex && \
-    sudo apt update && apt upgrade -y && \
-    sudo apt --no-install-recommends -y install \
+    apt update && apt upgrade -y && \
+    apt --no-install-recommends -y install \
         ca-certificates \
         cmake \
         g++ \
@@ -143,8 +143,8 @@ RUN set -ex && \
 FROM ubuntu:20.04
 
 RUN set -ex && \
-    sudo apt update && \
-    sudo apt --no-install-recommends -y install ca-certificates && \
+    apt update && \
+    apt --no-install-recommends -y install ca-certificates && \
     apt clean && \
     rm -rf /var/lib/apt
 COPY --from=builder /src/build/release/bin /usr/local/bin/

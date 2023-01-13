@@ -21,7 +21,7 @@ jobs:
       shell: bash
       run: |
           sudo apt update && sudo apt upgrade -y
-          sudo apt install cmake libboost-all-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libldns-dev doxygen graphviz libpgm-dev -y
+          sudo apt install curl build-essential libtool autotools-dev automake pkg-config python3 bsdmainutils cmake libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev -y
           git clone https://github.com/LOUD-Mining/whatcoin.git
     - name: build
       working-directory: ${{github.workspace}}

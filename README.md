@@ -200,7 +200,7 @@ Dependencies need to be built with -fPIC. Static libraries usually aren't, so yo
 
 #### On the Raspberry Pi
 
-Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (2017-09-07 or later) from https://www.raspberrypi.org/downloads/raspbian/. If you are using Raspian Jessie, [please see note in the following section](#note-for-raspbian-jessie-users).
+Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (2017-09-07 minimal version) from https://www.raspberrypi.org/downloads/raspbian/. If you are using Raspian Jessie, [please see note in the following section](#note-for-raspbian-jessie-users).
 
 * `apt-get update && apt-get upgrade` to install all of the latest software
 

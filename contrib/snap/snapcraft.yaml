@@ -1,6 +1,6 @@
-name: uplexa
+name: whatcoin
 version: 0.2.0.0
-summary: "uPlexa: the secure, private, IoT decentralised cryptocurrency https://uplexa.com"
+summary: "WhatCoin: the secure, private, IoT decentralised cryptocurrency "
 description: |
     uPlexa is a private, secure, untraceable, decentralised digital currency.
     You are your bank, you control your funds, and nobody can trace your transfers
@@ -9,23 +9,23 @@ grade: devel
 confinement: strict
 
 apps:
-    uplexad:
+    whatcoind:
         daemon: forking
         command: |
-          uplexad-wrapper --detach --data-dir ${SNAP_COMMON} --config-file ${SNAP_USER_DATA}/etc/uplexad.conf
+          whatcoind-wrapper --detach --data-dir ${SNAP_COMMON} --config-file ${SNAP_USER_DATA}/etc/whatcoind.conf
         plugs:
             - network
             - network-bind
-    uplexa-wallet-rpc:
+    whatcoin-wallet-rpc:
         command: |
-          uplexa-wallet-rpc --log-file ${SNAP_USER_DATA}
+          whatcoin-wallet-rpc --log-file ${SNAP_USER_DATA}
         plugs:
             - home
             - network
             - network-bind
-    uplexa-wallet-cli:
+    whatcoin-wallet-cli:
         command: |
-          uplexa-wallet-cli --log-file ${SNAP_USER_DATA}
+          whatcoin-wallet-cli --log-file ${SNAP_USER_DATA}
         plugs:
             - home
             - network
@@ -71,8 +71,8 @@ parts:
         plugin: dump
         source: .
         organize:
-            contrib/snap/uplexad.conf: etc/uplexad.conf
-            contrib/snap/uplexad-wrapper: bin/uplexad-wrapper
+            contrib/snap/whatcoind.conf: etc/whatcoind.conf
+            contrib/snap/whatcoind-wrapper: bin/whatcoind-wrapper
         prime:
             - etc
             - bin

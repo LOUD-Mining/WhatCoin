@@ -123,7 +123,7 @@ RUN set -ex && \
     fi
 
 # runtime stage
-FROM ubuntu:20.04
+FROM ubuntu:rolling
 
 RUN set -ex && \
     apt-get update && \

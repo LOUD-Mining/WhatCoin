@@ -30,4 +30,4 @@ jobs:
           git submodule update --init --force external/miniupnp
           git submodule update --init --force external/unbound
           git submodule update --init --force external/rapidjson
-          make release-all
+          make release

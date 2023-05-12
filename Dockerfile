@@ -1,7 +1,7 @@
 # Multistage docker build, requires docker 17.05
 
 # builder stage
-FROM ubuntu:rolling as builder
+FROM ubuntu:22.10 as builder
 
 RUN set -ex && \
     apt-get update && \
@@ -123,7 +123,7 @@ RUN set -ex && \
     fi
 
 # runtime stage
-FROM ubuntu:rolling
+FROM ubuntu:22.10
 
 RUN set -ex && \
     apt-get update && \

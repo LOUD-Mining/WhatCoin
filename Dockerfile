@@ -1,7 +1,7 @@
 # Multistage docker build, requires docker 17.05
 
 # builder stage
-FROM ubuntu:22.10 as builder
+FROM ubuntu:lunar-20230615 as builder
 
 RUN set -ex && \
     apt-get update && \
@@ -123,7 +123,7 @@ RUN set -ex && \
     fi
 
 # runtime stage
-FROM ubuntu:22.10
+FROM ubuntu:lunar-20230615
 
 RUN set -ex && \
     apt-get update && \
